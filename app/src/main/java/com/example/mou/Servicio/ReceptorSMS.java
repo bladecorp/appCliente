@@ -24,9 +24,7 @@ public class ReceptorSMS extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        new MsgToast(context, "Entró a OnReceive", false, TipoImportanciaToast.INFO.getId());
         if (intent.getAction().equals(SMS_RECEIVED)) {
-            new MsgToast(context, "Se recibió el mensaje", false, TipoImportanciaToast.INFO.getId());
 
             Bundle bundle = intent.getExtras();
             if (bundle != null) {
@@ -42,19 +40,16 @@ public class ReceptorSMS extends BroadcastReceiver {
                 }
 
                 String telefono = messages[0].getOriginatingAddress();
-                new MsgToast(context, "Telefono remitente: "+telefono, false, TipoImportanciaToast.INFO.getId());
-                Log.d("Broadcast", "Telefono: "+telefono);
+                new MsgToast(context, "Se interceptó el mensaje: "+telefono, false, TipoImportanciaToast.INFO.getId());
                 if(telefono.contentEquals(TELEFONO_TWILIO)) {
                     String mensaje = sb.toString();
-                    Log.d("Broadcast", "Mensaje: "+mensaje);
                     Intent intent1 = new Intent(context, ServicioSMS.class);
                     intent1.putExtra(TELEFONO, TELEFONO_TWILIO);
                     intent1.putExtra(SMS_RECIBIDO, mensaje);
-                    Log.d("Broadcast", "Telefono: "+telefono);
                     context.startService(intent1);
                     abortBroadcast();
                 }
-                Log.d("Broadcast", "No se interceptó el mensaje");
+                new MsgToast(context, "No se interceptó el mensaje"+telefono, false, TipoImportanciaToast.INFO.getId());
             }
         }
     }

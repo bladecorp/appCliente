@@ -37,6 +37,7 @@ public class ServicioSMS extends Service {
 
     private String telTwilio;
     private String mensajeRecibido;
+    private PowerManager.WakeLock wl;
 
     public ServicioSMS() {
 
@@ -49,6 +50,7 @@ public class ServicioSMS extends Service {
 
     @Override
     public void onDestroy() {
+
         new MsgToast(this, "Termina Servicio", false, TipoImportanciaToast.INFO.getId());
         super.onDestroy();
     }
@@ -58,20 +60,19 @@ public class ServicioSMS extends Service {
         despertarTelefono();
         telTwilio = intent.getStringExtra(ReceptorSMS.TELEFONO);
         mensajeRecibido = intent.getStringExtra(ReceptorSMS.SMS_RECIBIDO);
-        Log.d("Servicio SMS", "TelTwilio: "+telTwilio+", Mensaje: "+mensajeRecibido);
-        new MsgToast(this, "Inicia Servicio", false, TipoImportanciaToast.INFO.getId());
         procesarMensaje();
+        wl.release();
         onDestroy();
         return super.onStartCommand(intent, flags, startId);
     }
 
     private void procesarMensaje(){
-        Log.d("ServicioSMS","Procesando Mensaje...");new MsgToast(this, "Procesando Mensaje...", false, TipoImportanciaToast.INFO.getId());
+        new MsgToast(this, "Procesando Mensaje...", false, TipoImportanciaToast.INFO.getId());
         String[] mensaje = mensajeRecibido.split(";");
         if(mensaje.length >= 3) {
             int tipoMensaje = Integer.parseInt(mensaje[0]);
             if(tipoMensaje == TipoMensajeEnum.ALARMA.getId()){
-                Log.d("ServicioSMS","El mensaje es ALARMA");new MsgToast(this, "El mensaje es ALARMA", false, TipoImportanciaToast.INFO.getId());
+                Log.d("ServicioSMS","El mensaje es ALARMA");
                 int idSensor = Integer.parseInt(mensaje[1]);
                 int idVehiculo = Integer.parseInt(mensaje[2]);
                 procesarAlarma(idVehiculo, idSensor);
@@ -79,7 +80,6 @@ public class ServicioSMS extends Service {
                 int tipoSubMensaje = Integer.parseInt(mensaje[1]);
                 if(tipoSubMensaje == MensajeGeneral.INVITACION.getId()){
                     if(mensaje.length == 5){
-                        Log.d("ServicioSMS","El mensaje es INVITACIÓN");new MsgToast(this, "El mensaje es INVITACIÓN", false, TipoImportanciaToast.INFO.getId());
                         int idModelo = Integer.parseInt(mensaje[2]);
                         int idVehiculo = Integer.parseInt(mensaje[3]);
                         int idDestinatario = Integer.parseInt(mensaje[4]);
@@ -95,7 +95,6 @@ public class ServicioSMS extends Service {
 
     private void procesarAlarma(Integer idVehiculo, Integer idSensor){
      //   despertarTelefono();
-        Log.d("ServicioSMS","Procesando ALARMA");new MsgToast(this, "Procesando ALARMA", false, TipoImportanciaToast.INFO.getId());
         Vehiculo vehiculo = obtenerVehiculo(idVehiculo);
         if(vehiculo != null) {
             Sensor sensor = obtenerSensor(idSensor);
@@ -179,7 +178,7 @@ public class ServicioSMS extends Service {
 
    private void despertarTelefono(){
        PowerManager pm = (PowerManager) getSystemService(this.POWER_SERVICE);
-       PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK|PowerManager.ACQUIRE_CAUSES_WAKEUP, "bbbb");
+       wl = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK|PowerManager.ACQUIRE_CAUSES_WAKEUP, "bbbb");
        wl.acquire();
    }
 
