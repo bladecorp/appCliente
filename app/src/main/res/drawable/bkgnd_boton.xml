@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:right="5dp" android:top="5dp"
+                android:drawable="@drawable/cambio_a_negro">
+            <!--<shape>-->
+                <!--<padding  android:bottom="4dp" android:right="10dp"/>-->
+            <!--</shape>-->
+    </item>
+    <item>
+        <layer-list>
+            <item android:right="5dp" android:top="5dp">
+                <shape>
+                    <corners android:radius="100dp" />
+                    <gradient android:startColor="@android:color/transparent"
+                        android:endColor="#ff222222"
+                        android:type="linear"/>
+                    <padding android:bottom="2dp" android:right="7dp" />
+
+                </shape>
+            </item>
+            <item android:state_pressed="false"
+                android:drawable="@drawable/botones_clicked" />
+
+        </layer-list>
+    </item>
+
+    </selector>

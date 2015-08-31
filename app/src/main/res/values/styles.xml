@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:popupMenuStyle">@style/spinner_style</item>
+    </style>
+    <style name="spinner_style" >
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <!--<item name="android:paddingLeft">8dp</item>-->
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/spinner_bg</item>
+        <item name="android:panelBackground">@drawable/spinner_bg</item>
+        <item name="android:panelColorBackground">@drawable/spinner_bg</item>
+    </style>
+
+    <style name="StyledDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/Teal</item>
+        <item name="android:bottomDark">@color/Teal</item>
+        <item name="android:bottomMedium">@color/Teal</item>
+        <item name="android:centerBright">@color/Teal</item>
+        <item name="android:centerDark">@color/Teal</item>
+        <item name="android:centerMedium">@color/Teal</item>
+        <item name="android:fullBright">@color/Teal</item>
+        <item name="android:fullDark">@color/Teal</item>
+        <item name="android:topBright">@color/Teal</item>
+        <item name="android:topDark">@color/Teal</item>
+    </style>
+
+
+</resources>

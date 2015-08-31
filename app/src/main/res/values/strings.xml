@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Detección de Alarma</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_configuracion_principal">Configuración</string>
+    <string name="title_activity_datos_personales">Datos Personales</string>
+    <string name="title_activity_vehiculos">Vehículo</string>
+    <string name="title_activity_lista_vehiculos">Lista de Vehículos</string>
+    <string name="title_activity_enviar_invitacion">Enviar Invitación</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_registrar_cuenta">Registrar Cuenta</string>
+    <string name="title_activity_cambiar_contrasenia">Cambiar Contraseña</string>
+    <string name="title_activity_destinatarios">Lista de Destinatarios</string>
+    <string name="title_activity_status">Estatus Del Servicio</string>
+    <string name="title_activity_agregar_dest">Destinatario</string>
+    <string name="title_activity_mensajes">Mensajes</string>
+    <string name="title_activity_invitacion">Invitaciones</string>
+    <string name="title_activity_alarma">Alarma</string>
+
+</resources>

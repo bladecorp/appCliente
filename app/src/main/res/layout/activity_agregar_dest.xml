@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mou.prueba.AgregarDestActivity"
+    android:background="@color/material_blue_grey_900"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/agregarDest_tvTitulo"
+            android:text="TITULO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Nombre *"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:text="A. Paterno *"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:text="A. Materno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:text="Teléfono *"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="50dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/agregarDest_etNombre"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/controrno_edittext"
+                android:textColor="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"/>
+
+            <EditText
+                android:id="@+id/agregarDest_etApaterno"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/controrno_edittext"
+                android:textColor="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint="A. Paterno"
+                android:textColorHint="@color/button_material_dark"/>
+
+            <EditText
+                android:id="@+id/agregarDest_etAmaterno"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/controrno_edittext"
+                android:textColor="@android:color/holo_green_light"
+                android:gravity="center"
+                android:hint="A. Materno"
+                android:textColorHint="@color/button_material_dark"/>
+
+            <EditText
+                android:id="@+id/agregarDest_etTelefono"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/controrno_edittext"
+                android:textColor="@android:color/holo_green_light"
+                android:gravity="center"
+                android:inputType="phone"
+                android:hint="10 dígitos"
+                android:textColorHint="@color/button_material_dark"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

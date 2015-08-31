@@ -1,0 +1,292 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mou.prueba.DatosPersonales"
+    android:orientation="vertical"
+    android:background="@color/material_blue_grey_900">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout1_datosPers"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_usuario"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_contr"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password Local:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_contrLocal"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_nombre"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A. Paterno:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_apaterno"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A. Materno:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_amaterno"
+                android:layout_marginTop="25dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono:"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_datosPersonales_tel"
+                android:textSize="15sp"
+                android:layout_marginTop="25dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout2_datosPers"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_dP_usuario"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_light"
+                android:text="New Text"
+                android:id="@+id/txt_dP_contr"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                android:inputType="numberPassword"/>
+
+            <EditText
+                android:id="@+id/et_dP_password"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"
+                android:background="@drawable/controrno_edittext"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_light"
+                android:text="New Text"
+                android:id="@+id/txt_dP_contrLocal"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                android:inputType="numberPassword"/>
+
+            <EditText
+                android:id="@+id/et_dP_passwordLocal"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"
+                android:background="@drawable/controrno_edittext"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_dP_nombre"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_dP_nombre"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"
+                android:background="@drawable/controrno_edittext"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_dP_apaterno"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_dP_apaterno"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"
+                android:background="@drawable/controrno_edittext"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/txt_dP_amaterno"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_dP_amaterno"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:textColorHint="@color/button_material_dark"
+                android:background="@drawable/controrno_edittext"
+                android:gravity="center"/>
+
+            <Spinner
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:id="@+id/spinnerTels"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                style="@style/spinner_style"
+                android:popupBackground="@android:color/holo_green_light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btn_dP_agregarTel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/boton_redondo"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_dP_editarTel"
+            android:layout_marginLeft="20dp"
+            android:background="@android:drawable/ic_menu_edit"
+            android:visibility="gone"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_dP_borrarTel"
+            android:layout_marginLeft="20dp"
+            android:background="@android:drawable/ic_menu_delete"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bkgnd_boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:id="@+id/btn_dP_Guardar"
+            android:layout_gravity="center_horizontal"
+            android:enabled="false"/>
+    </LinearLayout>
+
+
+</LinearLayout>

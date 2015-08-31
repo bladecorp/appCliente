@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mou.prueba.DestinatariosActivity">
+    <item android:id="@+id/menu_dest_info" android:title="Información"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_help"/>
+    <item android:id="@+id/menu_dest_borrarTodo" android:title="Eliminar Todo"
+        android:orderInCategory="100" app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_delete"/>
+</menu>

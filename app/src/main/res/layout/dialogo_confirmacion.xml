@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:background="#004D40"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TITULO"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:id="@+id/tv_dialogo_vehiculos_titulo"
+            android:paddingLeft="10dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MENSAJE"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:id="@+id/tv_dialogo_vehiculos_mensaje" />
+
+        <EditText
+            android:id="@+id/et_dialogo_vehiculos_pswd"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:inputType="numberPassword"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textColor="#ffffffff"/>
+
+        <EditText
+            android:id="@+id/et_dialogo_vehiculos_tel"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:inputType="phone"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#ffffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:background="@drawable/boton_alter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="SALIR"
+            android:id="@+id/btn_dialogo_vehiculos_salir"
+            android:textColor="#ffffffff"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/boton_alter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR"
+            android:id="@+id/btn_dialogo_vehiculos_registrar"
+            android:textColor="#ffffffff"/>
+
+    </LinearLayout>
+
+</LinearLayout>

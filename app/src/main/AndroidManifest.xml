@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mou.prueba" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfiguracionPrincipal"
+            android:label="@string/title_activity_configuracion_principal"
+            android:parentActivityName=".MainActivity"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DatosPersonales"
+            android:label="@string/title_activity_datos_personales"
+            android:parentActivityName=".ConfiguracionPrincipal"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ConfiguracionPrincipal" />
+        </activity>
+        <activity
+            android:name=".Vehiculos"
+            android:label="@string/title_activity_vehiculos"
+            android:parentActivityName=".ListaVehiculos"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ListaVehiculos" />
+        </activity>
+        <activity
+            android:name=".ListaVehiculos"
+            android:label="@string/title_activity_lista_vehiculos"
+            android:parentActivityName=".ConfiguracionPrincipal"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ConfiguracionPrincipal" />
+        </activity>
+        <activity
+            android:name=".EnviarInvitacion"
+            android:label="@string/title_activity_enviar_invitacion"
+            android:parentActivityName=".ListaVehiculos"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ListaVehiculos" />
+        </activity>
+        <activity
+            android:name=".RegistroActivity"
+            android:label="@string/title_activity_registro"
+            android:parentActivityName=".MainActivity"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegistrarCuenta"
+            android:label="@string/title_activity_registrar_cuenta"
+            android:parentActivityName=".RegistroActivity"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.RegistroActivity" />
+        </activity>
+
+        <activity
+            android:name=".CambiarContrasenia"
+            android:label="@string/title_activity_cambiar_contrasenia"
+            android:parentActivityName=".ConfiguracionPrincipal"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ConfiguracionPrincipal" />
+        </activity>
+        <activity
+            android:name=".DestinatariosActivity"
+            android:label="@string/title_activity_destinatarios"
+            android:parentActivityName=".ListaVehiculos"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ListaVehiculos" />
+        </activity>
+        <activity
+            android:name=".StatusActivity"
+            android:label="@string/title_activity_status"
+            android:parentActivityName=".ListaVehiculos"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ListaVehiculos" />
+        </activity>
+        <activity
+            android:name=".AgregarDestActivity"
+            android:label="@string/title_activity_agregar_dest"
+            android:parentActivityName=".DestinatariosActivity"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.DestinatariosActivity" />
+        </activity>
+        <activity
+            android:name=".MensajesActivity"
+            android:label="@string/title_activity_mensajes"
+            android:parentActivityName=".ListaVehiculos"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ListaVehiculos" />
+        </activity>
+
+        <service
+            android:name="com.example.mou.Servicio.ServicioSMS"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver
+            android:name="com.example.mou.Servicio.ReceptorSMS"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".InvitacionActivity"
+            android:label="@string/title_activity_invitacion"
+            android:parentActivityName=".ConfiguracionPrincipal"
+            android:finishOnTaskLaunch ="true"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.ConfiguracionPrincipal" />
+        </activity>
+        <activity
+            android:name=".AlarmaActivity"
+            android:label="@string/title_activity_alarma"
+            android:parentActivityName=".MainActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mou.prueba.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

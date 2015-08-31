@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="1dp"
+    tools:context="com.example.mou.prueba.ListaVehiculos"
+    android:background="@color/material_blue_grey_900"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_listaVehiculos"
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="0dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lista_vehiculos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_listaVehiculos"
+        android:gravity="right"
+        android:layout_marginTop="-35dp" >
+
+        <ImageButton
+            android:id="@+id/lista_vehiculos_btn_agregar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/boton_redondo"
+            android:src="@drawable/ic_plusplata"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lista_vehiculos_tvNoHay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay vehiculos registrados"
+        android:textColor="@android:color/holo_green_dark"
+        android:gravity="center"
+        android:layout_marginTop="180dp"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

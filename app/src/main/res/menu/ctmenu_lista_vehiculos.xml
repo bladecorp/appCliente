@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/ctmenu_lista_vehiculos_editar" android:title="Editar"
+        android:icon="@android:drawable/ic_menu_edit"/> />
+    <item android:id="@+id/ctmenu_lista_vehiculos_statusServ" android:title="Cambiar Estatus del Servicio"
+        android:icon="@android:drawable/ic_input_get"/>/>
+
+    <item android:id="@+id/ctmenu_lista_vehiculos_dest" android:title="Destinatarios"
+        android:icon="@android:drawable/ic_delete" />
+    <item android:id="@+id/ctmenu_lista_vehiculos_histMensajes" android:title="Historico Mensajes"
+        android:icon="@android:drawable/ic_dialog_info" />
+    <item android:id="@+id/ctmenu_lista_vehiculos_keepAlive" android:title="Revisar Sensores"
+        android:icon="@android:drawable/ic_menu_mylocation" />
+
+</menu>

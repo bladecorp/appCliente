@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mou.prueba.MensajesActivity">
+    <item android:id="@+id/menu_mensajes_filtro" android:title="Mensajes Filtrados"
+        android:orderInCategory="100" app:showAsAction="always" android:icon="@android:drawable/ic_menu_sort_by_size"/>
+
+    <item android:id="@+id/menu_mensajes_todos" android:title="Mensajes Todos"
+        android:orderInCategory="100" app:showAsAction="always" android:icon="@android:drawable/stat_notify_sync_noanim"/>
+
+</menu>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mou.prueba.StatusActivity"
+    android:background="@color/material_blue_grey_900"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/status_tvVehiculo"
+        android:text="Vehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_green_dark"/>
+    <TextView
+        android:id="@+id/status_tvPlacas"
+        android:text="Vehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_below="@+id/status_tvVehiculo"
+        android:textColor="@android:color/holo_green_dark"/>
+
+    <TextView
+        android:id="@+id/status_tvMensaje"
+        android:text="Mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_below="@+id/status_tvPlacas"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_marginTop="70dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_tvMensaje"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/status_btnStatus"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="Desactivado"
+            android:textColor="#eeeeee"
+            android:background="@drawable/boton_status"/>
+
+        <TextView
+            android:text="Mantenga el botón oprimido para cambiar el status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_below="@+id/status_tvPlacas"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_marginTop="20dp"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
