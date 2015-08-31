@@ -39,7 +39,8 @@ public class AlarmaActivity extends ActionBarActivity implements View.OnClickLis
         String sensor = getIntent().getStringExtra("sensor");
         String vehiculo = getIntent().getStringExtra("nombreVehiculo");
         String placas = getIntent().getStringExtra("placas");
-        tvMensaje.setText("Se detectó actividad en el sensor de: "+sensor+"\nVehiculo: "+vehiculo+"\nPlacas: "+placas);
+        tvMensaje.setText("Se detectó actividad en el sensor de: "+sensor.toUpperCase()
+                                            +"\n\nVehiculo: "+vehiculo+"\nPlacas: "+placas);
         Vibrator v = (Vibrator) this.getSystemService(this.VIBRATOR_SERVICE);// This example will cause the phone to vibrate "SOS" in Morse Code
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
                 | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -116,5 +117,11 @@ public class AlarmaActivity extends ActionBarActivity implements View.OnClickLis
                 }
             break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        super.onBackPressed();
     }
 }
