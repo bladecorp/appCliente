@@ -18,7 +18,7 @@
             android:textColor="#ffffff"
             android:textSize="22sp"
             android:id="@+id/tv_dialogo_vehiculos_titulo"
-            android:paddingLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
 
     </LinearLayout>
     <LinearLayout

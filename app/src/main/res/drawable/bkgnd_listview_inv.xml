@@ -10,7 +10,7 @@
         <layer-list>
             <item android:right="5dp" android:top="5dp">
                 <shape>
-                    <corners android:radius="0dp" />
+                    <corners android:radius="6dp" />
                     <gradient android:startColor="@android:color/transparent"
                         android:endColor="@android:color/black"
                         android:type="linear"/>

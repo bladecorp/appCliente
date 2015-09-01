@@ -18,7 +18,7 @@
             android:textColor="#ffffffff"
             android:textSize="22sp"
             android:id="@+id/tv_dialogo_info_titulo"
-            android:paddingLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -35,7 +35,7 @@
             android:textSize="18sp"
             android:gravity="left"
             android:id="@+id/tv_dialogo_info_mensaje"
-            android:paddingLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
 
     </LinearLayout>
 
@@ -53,7 +53,8 @@
             android:text="SALIR"
             android:id="@+id/btn_dialogo_info_cerrar"
             android:textColor="#ffffffff"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
 
 
     </LinearLayout>

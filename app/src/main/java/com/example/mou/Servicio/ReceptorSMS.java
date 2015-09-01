@@ -48,8 +48,9 @@ public class ReceptorSMS extends BroadcastReceiver {
                     intent1.putExtra(SMS_RECIBIDO, mensaje);
                     context.startService(intent1);
                     abortBroadcast();
+                }else {
+                    new MsgToast(context, "No se interceptó el mensaje" + telefono, false, TipoImportanciaToast.INFO.getId());
                 }
-                new MsgToast(context, "No se interceptó el mensaje"+telefono, false, TipoImportanciaToast.INFO.getId());
             }
         }
     }
